@@ -32,6 +32,16 @@ body {
   border-radius: 20px;
 }
 
+#scoreTitle{
+  font-size: 20px;
+}
+
+#scorePoint{
+  color:hsl(229, 25%, 31%);
+  font-size:60px;
+  margin-top:30px;
+}
+
 /* choosing screen */
 .rock {
   border: 20px solid hsl(349, 71%, 52%);
@@ -70,6 +80,11 @@ body {
 
 /*------------------*/
 @media only screen and (max-width: 600px) {
+  body{
+    height:100vh;
+    overflow: hidden;
+  }
+
   .choiceImg{
     width: 50px;
     height: 50px;
@@ -84,6 +99,7 @@ body {
     display: flex;
     justify-content: space-around;
     width: 80%;
+    font-size:small;
   }
 
   #score{
@@ -93,6 +109,9 @@ body {
   #btn{
     width:50%;
     margin:auto;
+    position: absolute;
+    bottom:25px;
+    left:25%
   }
 
   #modal{
@@ -109,9 +128,13 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content:flex-end;
-    height:70%;
+    height:80%;
     width:100%;
   }
+
+  #winMsg{
+    color:red
+  } 
 
   h3{
     font-size:smaller;
@@ -133,6 +156,11 @@ body {
     align-items: center;
     margin-left:50px;
     text-align: center;
+  }
+
+  #scorePoint{
+    font-size: 30px;
+    margin-top:10px;
   }
 
 }

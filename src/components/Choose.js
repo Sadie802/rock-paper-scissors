@@ -132,14 +132,8 @@ export default function Choose() {
           <h1>SCISSORS</h1>
         </div>
         <div id="score">
-          <p style={{ fontSize: "20px" }}>SCORE</p>
-          <p
-            style={{
-              color: "hsl(229, 25%, 31%)",
-              fontSize: "60px",
-              marginTop: "30px",
-            }}
-          >
+          <p id='scoreTitle'>SCORE</p>
+          <p id='scorePoint'>
             {score}
           </p>
         </div>
