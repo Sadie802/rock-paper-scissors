@@ -1,38 +1,226 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&display=swap");
+body {
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
+/* Rock Paper Scissors + score container */
+#container {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  margin: auto;
+  margin-top: 40px;
+  border: 3px solid hsl(217, 16%, 45%);
+  padding: 20px;
+  border-radius: 20px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  line-height: 0px;
+  font-size: x-large;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Score box */
+#score {
+  background-color: white;
+  color: hsl(229, 64%, 46%);
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* choosing screen */
+.rock {
+  border: 20px solid hsl(349, 71%, 52%);
+  margin-top: 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.paper {
+  border: 20px solid hsl(230, 89%, 62%);
+  margin-right: 80px;
+  margin-top: 40px;
+}
+
+.scissors {
+  border: 20px solid hsl(39, 89%, 49%);
+}
+
+.gameButton {
+  border-radius: 100px;
+  padding: 20px;
+}
+
+
+#choices {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 60vh;
+  background-image: url("./images/bg-triangle.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.choiceImg {
+  width: 100px;
+  height: 100px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/*------------------*/
+@media only screen and (max-width: 600px) {
+  .choiceImg{
+    width: 50px;
+    height: 50px;
   }
-  to {
-    transform: rotate(360deg);
+ 
+  #choices{
+    height: 50vh;
+
+  }
+
+  #container {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+  }
+
+  #score{
+    width:30%
+  }
+
+  #btn{
+    width:50%;
+    margin:auto;
+  }
+
+  #modal{
+    height:90vh;
+    width:90vw;
+  }
+
+  #rulesImg {
+    margin-top: 100px;
+  }
+
+  #winMsgContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-end;
+    height:70%;
+    width:100%;
+  }
+
+  h3{
+    font-size:smaller;
+    margin-right:20px;
+  }
+
+  #playerPickContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #housePickContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left:50px;
+    text-align: center;
+  }
+
+}
+
+#rulesBtn {
+  float: right;
+  margin-right: 40px;
+  border: 2px solid hsl(217, 16%, 45%);
+  color: white;
+  padding: 10px 40px 10px 40px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: large;
+  border-radius: 15px;
+}
+
+#modal-modal-title {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 30px;
+}
+
+#modal-modal-description {
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
+}
+
+#closeModal {
+  background: transparent;
+  border: none;
+  font-size: 30px;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: hsl(217, 16%, 45%);
+  cursor: pointer;
+}
+
+#winMsg {
+  color: white;
+  text-align: center;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 3rem;
+}
+
+.gamePlayContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 150px;
+  margin-right: 150px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  color: white;
+  font-size: 2rem;
+}
+
+.house {
+  border: 20px solid hsl(308, 31%, 50%);
+}
+
+#winMsgContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#nextRndBtn {
+  color: hsl(229, 25%, 31%);
+  font-family: "Barlow Semi Condensed", sans-serif;
+  padding: 10px 30px 10px 30px;
+  font-size: 1.5rem;
+  border-radius: 15px;
+}
+
+#nextRndBtn:hover {
+  color: hsl(349, 71%, 52%);
+}
+
+#housePickContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  .gamePlayContainer {
+    margin: 20px;
   }
 }
